@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © CTI Digital, LLC. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="cti" translate="label" sortOrder="100">
+            <label>CTI Digital</label>
+        </tab>
+        <section id="timer" translate="label" type="text" sortOrder="111" showInDefault="1" showInWebsite="1">
+            <class>separator-top</class>
+            <label>Dispatch Countdown Timer</label>
+            <tab>cti</tab>
+            <resource>Cti_Timer::timer</resource>
+            <group id="manage" translate="label" type="text" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field type="select" id="general_enabling" translate="label" sortOrder="220" showInDefault="1" showInWebsite="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="day_settings" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1">
+                <label>Week Days Settings</label>
+                <field id="monday" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1">
+                    <label>Monday</label>
+                    <backend_model>Cti\Timer\Model\Config\Backend\Time</backend_model>
+                    <comment>Time should be in HH:MM format</comment>
+                </field>
+                <field id="tuesday" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1">
+                    <label>Tuesday</label>
+                    <backend_model>Cti\Timer\Model\Config\Backend\Time</backend_model>
+                    <comment>Time should be in HH:MM format</comment>
+                </field>
+                <field id="wednesday" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1">
+                    <label>Wednesday</label>
+                    <backend_model>Cti\Timer\Model\Config\Backend\Time</backend_model>
+                    <comment>Time should be in HH:MM format</comment>
+                </field>
+                <field id="thursday" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1">
+                    <label>Thursday</label>
+                    <backend_model>Cti\Timer\Model\Config\Backend\Time</backend_model>
+                    <comment>Time should be in HH:MM format</comment>
+                </field>
+                <field id="friday" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1">
+                    <label>Friday</label>
+                    <backend_model>Cti\Timer\Model\Config\Backend\Time</backend_model>
+                    <comment>Time should be in HH:MM format</comment>
+                </field>
+                <field id="saturday" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1">
+                    <label>Saturday</label>
+                    <backend_model>Cti\Timer\Model\Config\Backend\Time</backend_model>
+                    <comment>Time should be in HH:MM format</comment>
+                </field>
+                <field id="sunday" translate="label" type="text" sortOrder="7" showInDefault="1" showInWebsite="1">
+                    <label>Sunday</label>
+                    <backend_model>Cti\Timer\Model\Config\Backend\Time</backend_model>
+                    <comment>Time should be in HH:MM format</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
